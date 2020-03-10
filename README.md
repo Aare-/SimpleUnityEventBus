@@ -1,2 +1,2 @@
 # SimpleUnityEventBus
-Very simple and robust implementation of unity event bus
+Very simple and robust implementation of event bus for unity
