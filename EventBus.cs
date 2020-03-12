@@ -38,13 +38,13 @@ public class EventBus {
 
     private EventBus() { }
 
-    public void SendMessage<T>(T message) where T : IMessage {
-        _listenersLock = true;
-        
+    public void SendMessage<T>(T message) where T : IMessage {               
         // no one listening to this event yet
         if (!AllListeners.ContainsKey(EventKey<T>())) {
             return;
         }
+        
+        _listenersLock = true;
         
         foreach (var keyValuePair in AllListeners[EventKey<T>()]) {
             keyValuePair.Value(message);
