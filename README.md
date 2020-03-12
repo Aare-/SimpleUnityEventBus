@@ -52,6 +52,6 @@ Here are examples on how to achieve this.
 ```C#
   EventBus
     .Instance
-    .UnsubscribeAll(this);
+    .UnsubscribeAll(this); // this must extend Unity.Object
 ```
 
